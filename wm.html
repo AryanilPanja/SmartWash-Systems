@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washing Machines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top bar with logo image -->
+    <div class="top-bar">
+        <img src="IIITH_logo.png" alt="Logo" class="logo">
+        Washing Machines
+    </div>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <h1 class="title">Washing Machines</h1>
+    <!-- Menu -->
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <!-- Column 1 -->
+            <div class="machine">
+                <div class="light"></div>
+                <span>Washing Machine 1</span>
+            </div>
+            <div class="machine">
+                <div class="light"></div>
+                <span>Washing Machine 2</span>
+            </div>
+            <div class="machine">
+                <div class="light"></div>
+                <span>Washing Machine 3</span>
+            </div>
+            <div class="machine">
+                <div class="light"></div>
+                <span>Washing Machine 4</span>
+            </div>
+        </div>
+
+        <div class="column">
+            <!-- Column 2 -->
+            <div class="machine">
+                <div class="light"></div>
+                <span>Washing Machine 5</span>
+            </div>
+            <div class="machine">
+                <div class="light"></div>
+                <span>Washing Machine 6</span>
+            </div>
+            <div class="machine">
+                <div class="light"></div>
+                <span>Washing Machine 7</span>
+            </div>
+            <div class="machine">
+                <div class="light"></div>
+                <span>Washing Machine 8</span>
+            </div>
+            <div class="machine">
+                <div class="light"></div>
+                <span>Washing Machine 9</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
