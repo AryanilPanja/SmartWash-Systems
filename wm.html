@@ -4,133 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Washing Machines</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-        }
-
-        .machine {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .light {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 20px;
-            background-color: gray;
-        }
-
-        .green {
-            background-color: green;
-        }
-
-        .red {
-            background-color: red;
-        }
-
-        .yellow {
-            background-color: yellow;
-        }
-
-        .title {
-            text-align: center;
-            font-size: 40px;
-            margin-bottom: 40px;
-            color: #333;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-        }
-
-        .column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 15px;
-        }
-
-        /* Styles for the menu icon and menu */
-        .menu-icon {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 30px;
-            height: 20px;
-            cursor: pointer;
-            z-index: 9999;
-        }
-
-        .menu-icon span {
-            display: block;
-            width: 30px;
-            height: 4px;
-            background-color: #333;
-            margin: 6px 0;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .menu-icon.open span:nth-child(1) {
-            transform: translateY(8px) rotate(-45deg);
-        }
-
-        .menu-icon.open span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .menu-icon.open span:nth-child(3) {
-            transform: translateY(-8px) rotate(45deg);
-        }
-
-        .menu {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 100vh;
-            background-color: #f1f1f1;
-            transform: translateX(200px);
-            transition: transform 0.3s ease-in-out;
-            z-index: 9998;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 0 0 10px 0;
-        }
-
-        .menu.open {
-            transform: translateX(0);
-        }
-
-        .menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px;
-        }
-
-        .menu ul li {
-            margin-bottom: 15px;
-        }
-
-        .menu ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top bar with logo image -->
+    <div class="top-bar">
+        <img src="IIITH_logo.png" alt="Logo" class="logo">
+        Washing Machines
+    </div>
+
     <div class="menu-icon" onclick="toggleMenu()">
         <span></span>
         <span></span>
