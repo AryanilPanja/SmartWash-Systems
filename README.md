@@ -5,6 +5,8 @@ Hello Everyone, This is team IIIT BOnkers here,
 So Our App is quite simple to use,
 One need to scan QR Code:
 ![image](https://github.com/AryanilPanja/SmartWash-Systems/assets/143735920/71016bf5-1ea2-478c-b79e-e61d1ece0d39)
+
+
 It was for fun, But This Type of QR Code will actually let you to link 
 
 How to Use :
