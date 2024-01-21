@@ -76,20 +76,23 @@
         </div>
     </div>
 
-    <script>
-        function chooseTimer(machineName) {
-            // Prompt the user for input
-            var timeInput = prompt("Enter washing time in minutes for " + machineName + ":");
+    <div id="overlay">
+        <div id="popup">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2>Enter Wash Information</h2>
+          <form id="inputForm">
+            <label for="name">Time:</label>
+            <input type="number" id="name" name="name" required><br>
+      
+            <!-- <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br> -->
+      
+            <button type="button" onclick="submitForm()">Submit</button>
+          </form>
+        </div>
+      </div>
 
-            // Validate the input and perform necessary actions
-            if (timeInput !== null && !isNaN(timeInput) && timeInput >= 1 && timeInput <= 9) {
-                alert("Washing time set to " + timeInput + " minutes for " + machineName + ".");
-                // Add your logic to handle the washing time here
-            } else {
-                alert("Invalid input. Please enter a number between 1 and 9.");
-            }
-        }
-    </script>
+ 
 
     
 </body>
