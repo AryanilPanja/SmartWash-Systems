@@ -32,49 +32,64 @@
     <div class="container">
         <div class="column">
             <!-- Column 1 -->
-            <div class="machine">
+            <button class="machine" onclick="chooseTimer('Washing Machine 1')" >
                 <div class="light"></div>
                 <span>Washing Machine 1</span>
-            </div>
-            <div class="machine">
+            </button>
+            <button class="machine" onclick="chooseTimer('Washing Machine 2')">
                 <div class="light"></div>
                 <span>Washing Machine 2</span>
-            </div>
-            <div class="machine">
+            </button>
+            <button class="machine" onclick="chooseTimer('Washing Machine 3')">
                 <div class="light"></div>
                 <span>Washing Machine 3</span>
-            </div>
-            <div class="machine">
+            </button>
+            <button class="machine" onclick="chooseTimer('Washing Machine 4')">
                 <img class = "image" src="Images/WM_Close.png">
                 <span>Washing Machine 4</span>
-            </div>
-            <div class="machine">
+            </button>
+            <button class="machine" onclick="chooseTimer('Washing Machine 5')">
                 <div class="light"></div>
                 <span>Washing Machine 5</span>
-            </div>
+            </button>
         </div>
 
         <div class="column">
             <!-- Column 2 -->
             
-            <div class="machine">
+            <button class="machine" onclick="chooseTimer('Washing Machine 6')">
                 <div class="light"></div>
                 <span>Washing Machine 6</span>
-            </div>
-            <div class="machine">
+            </button>
+            <button class="machine" onclick="chooseTimer('Washing Machine 7')">
                 <div class="light"></div>
                 <span>Washing Machine 7</span>
-            </div>
-            <div class="machine">
+            </button>
+            <button class="machine" onclick="chooseTimer('Washing Machine 8')">
                 <div class="light"></div>
                 <span>Washing Machine 8</span>
-            </div>
-            <div class="machine">
+            </button>
+            <button class="machine" onclick="chooseTimer('Washing Machine 9')">
                 <div class="light"></div>
                 <span>Washing Machine 9</span>
-            </div>
+            </button>
         </div>
     </div>
+
+    <script>
+        function chooseTimer(machineName) {
+            // Prompt the user for input
+            var timeInput = prompt("Enter washing time in minutes for " + machineName + ":");
+
+            // Validate the input and perform necessary actions
+            if (timeInput !== null && !isNaN(timeInput) && timeInput >= 1 && timeInput <= 9) {
+                alert("Washing time set to " + timeInput + " minutes for " + machineName + ".");
+                // Add your logic to handle the washing time here
+            } else {
+                alert("Invalid input. Please enter a number between 1 and 9.");
+            }
+        }
+    </script>
 
     
 </body>
