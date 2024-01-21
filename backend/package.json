@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/AryanilPanja/SmartWash-Systems/issues"
   },
-  "homepage": "https://github.com/AryanilPanja/SmartWash-Systems#readme"
+  "homepage": "https://github.com/AryanilPanja/SmartWash-Systems#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
