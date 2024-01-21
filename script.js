@@ -28,6 +28,7 @@ function submitForm() {
 // Add your logic to handle form submission here
 // For now, let's just close the popup
 var time = parseInt(document.getElementById("name").value);
+
     console.log("Number:", time);
 closePopup();
 }
