@@ -6,7 +6,8 @@ function toggleMenu() {
     menuIcon.classList.toggle("open");
     }
 
-    function chooseTimer(machineName) {
+    /*
+    function chooseTimer(machineName, machinecode) {
         // Prompt the user for input
         document.getElementById("overlay").style.display = "flex";
     
@@ -32,3 +33,19 @@ var time = parseInt(document.getElementById("name").value);
     console.log("Number:", time);
 closePopup();
 }
+*/
+
+function chooseTimer(machineName,machineCode){
+    // Prompt the user for input
+    var timeInput = prompt("Enter washing time in minutes for " + machineName + ":");
+
+    // Validate the input and perform necessary actions
+    if (timeInput !== null && !isNaN(timeInput) && timeInput >= 1 && timeInput <= 9) {
+        alert("Washing time set to " + timeInput + " minutes for " + machineName + ".");
+        document.getElementById(machineCode).classList.toggle('close');
+        // Add your logic to handle the washing time here
+    } else {
+        alert("Invalid input. Please enter a number between 1 and 9.");
+    }
+}
+
