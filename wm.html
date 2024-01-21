@@ -32,23 +32,23 @@
     <div class="container">
         <div class="column">
             <!-- Column 1 -->
-            <button class="machine" onclick="chooseTimer('Washing Machine 1')" >
+            <button class="open" onclick="chooseTimer('Washing Machine 1',1)" id="1">
                 <div class="light"></div>
                 <span>Washing Machine 1</span>
             </button>
-            <button class="machine" onclick="chooseTimer('Washing Machine 2')">
+            <button class="open" onclick="chooseTimer('Washing Machine 2',2)" id="2">
                 <div class="light"></div>
                 <span>Washing Machine 2</span>
             </button>
-            <button class="machine" onclick="chooseTimer('Washing Machine 3')">
+            <button class="open" onclick="chooseTimer('Washing Machine 3',3)" id="3">
                 <div class="light"></div>
                 <span>Washing Machine 3</span>
             </button>
-            <button class="machine" onclick="chooseTimer('Washing Machine 4')">
+            <button class="open" onclick="chooseTimer('Washing Machine 4',4)" id="4">
                 <img class = "image" src="Images/WM_Close.png">
                 <span>Washing Machine 4</span>
             </button>
-            <button class="machine" onclick="chooseTimer('Washing Machine 5')">
+            <button class="open" onclick="chooseTimer('Washing Machine 5',5)" id="5">
                 <div class="light"></div>
                 <span>Washing Machine 5</span>
             </button>
@@ -57,43 +57,40 @@
         <div class="column">
             <!-- Column 2 -->
             
-            <button class="machine" onclick="chooseTimer('Washing Machine 6')">
+            <button class="open" onclick="chooseTimer('Washing Machine 6',6)" id="6">
                 <div class="light"></div>
                 <span>Washing Machine 6</span>
             </button>
-            <button class="machine" onclick="chooseTimer('Washing Machine 7')">
+            <button class="open" onclick="chooseTimer('Washing Machine 7',7)"  id="7">
                 <div class="light"></div>
                 <span>Washing Machine 7</span>
             </button>
-            <button class="machine" onclick="chooseTimer('Washing Machine 8')">
+            <button class="open" onclick="chooseTimer('Washing Machine 8',8)"  id="8">
                 <div class="light"></div>
                 <span>Washing Machine 8</span>
             </button>
-            <button class="machine" onclick="chooseTimer('Washing Machine 9')">
+            <button class="open" onclick="chooseTimer('Washing Machine 9',9)"  id="9">
                 <div class="light"></div>
                 <span>Washing Machine 9</span>
             </button>
         </div>
     </div>
 
-    <div id="overlay">
-        <div id="popup">
-          <span class="close-btn" onclick="closePopup()">&times;</span>
-          <h2>Enter Wash Information</h2>
-          <form id="inputForm">
-            <label for="name">Time:</label>
-            <input type="number" id="name" name="name" required><br>
-      
-            <!-- <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br> -->
-      
-            <button type="button" onclick="submitForm()">Submit</button>
-          </form>
-        </div>
-      </div>
+    <script>
+        function chooseTimer(machineName,machineCode){
+            // Prompt the user for input
+            var timeInput = prompt("Enter washing time in minutes for " + machineName + ":");
 
- 
-
+            // Validate the input and perform necessary actions
+            if (timeInput !== null && !isNaN(timeInput) && timeInput >= 1 && timeInput <= 9) {
+                alert("Washing time set to " + timeInput + " minutes for " + machineName + ".");
+                document.getElementById(machineCode).classList.toggle('close');
+                // Add your logic to handle the washing time here
+            } else {
+                alert("Invalid input. Please enter a number between 1 and 9.");
+            }
+        }
+    </script>
     
 </body>
 </html>
