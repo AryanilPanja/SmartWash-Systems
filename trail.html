@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .machine {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.6s ease-in-out;
+        }
+
+        .opan {
+            width: 50px;
+            height: 50px;
+            background: url('/Images/WM_Open.png') no-repeat center center;
+            background-size: contain;
+        }
+
+        .close {
+            width: 50px;
+            height: 50px;
+            background: url('/Images/WM_Close.png') no-repeat center center;
+            background-size: contain;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <button class="machine" onclick="chooseTimer('Washing Machine 1',1)" >
+        <div class="opan"  id= "1" ></div>
+        <span>Washing Machine 1</span>
+
+    <script>
+
+function chooseTimer(machineName,machineCode){
+    // Prompt the user for input
+    var timeInput = prompt("Enter washing time in minutes for " + machineName + ":");
+
+    // Validate the input and perform necessary actions
+    if (timeInput !== null && !isNaN(timeInput) && timeInput >= 1 && timeInput <= 75) {
+        alert("Washing time set to " + timeInput + " minutes for " + machineName + ".");
+        document.getElementById(machineCode).classList.toggle('close');
+        // Add your logic to handle the washing time here
+    } else {
+        alert("Invalid input. Please enter a number between 1 and 75.");
+    }
+}
+    </script>
+</body>
+</html>

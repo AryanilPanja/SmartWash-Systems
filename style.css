@@ -36,17 +36,6 @@
             animation: fadeIn 1.6s ease-in-out;
         }
 
-        .machine {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1.6s ease-in-out;
-        }
-
 
         .machine:hover {
             box-shadow: 0 0 20px #1db894c4;
@@ -190,7 +179,6 @@
             height: 50px;
             background: url('/Images/WM_Close.png') no-repeat center center;
             background-size: contain;
-            
         }
 
         .wait {
