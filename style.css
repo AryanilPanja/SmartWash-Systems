@@ -36,6 +36,10 @@
             animation: fadeIn 1.6s ease-in-out;
         }
 
+        .machine:hover {
+            box-shadow: 0 0 20px #1db894c4;
+        }
+
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -109,7 +113,7 @@
         }
 
         .menu-icon.open span:nth-child(1) {
-            transform: translateY(8px) rotate(-45deg);
+            transform: translateY(9.5px) rotate(-45deg);
         }
 
         .menu-icon.open span:nth-child(2) {
@@ -117,7 +121,7 @@
         }
 
         .menu-icon.open span:nth-child(3) {
-            transform: translateY(-8px) rotate(45deg);
+            transform: translateY(-9.5px) rotate(45deg);
         }
 
         .menu {
@@ -143,6 +147,10 @@
             list-style: none;
             padding: 0;
             margin: 20px;
+        }
+
+        .menu ul li:hover{
+            box-shadow: 0 0px 20px #333;
         }
 
         .menu ul li {
