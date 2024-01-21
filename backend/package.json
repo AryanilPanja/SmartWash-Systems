@@ -1,0 +1,28 @@
+{
+  "name": "wm-control",
+  "version": "1.0.0",
+  "description": "helps control flow of info from the wm website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryanilPanja/SmartWash-Systems.git"
+  },
+  "keywords": [
+    "washing",
+    "machine",
+    "control",
+    "laundry",
+    "application",
+    "node.js",
+    "express"
+  ],
+  "author": "aryanil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AryanilPanja/SmartWash-Systems/issues"
+  },
+  "homepage": "https://github.com/AryanilPanja/SmartWash-Systems#readme"
+}
