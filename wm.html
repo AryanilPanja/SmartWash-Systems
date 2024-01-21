@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script src="script.js"></script> 
     <!-- Top bar with logo image -->
     <div class="top-bar">
         <img src="Images/IIITH_logo.png" alt="Logo" class="logo">
@@ -30,58 +31,69 @@
 
     <div class="container">
         <div class="column">
-            <!-- Column 1 -->
-            <div class="machine" id="1">
-                <div class="open"></div>
+
+            <button class="open" onclick="chooseTimer('Washing Machine 1',1)" id="1">
+                <div class="light"></div>
                 <span>Washing Machine 1</span>
-            </div>
-            <div class="machine" id="2">
-                <div class="open"></div>
+            </button>
+            <button class="open" onclick="chooseTimer('Washing Machine 2',2)" id="2">
+                <div class="light"></div>
                 <span>Washing Machine 2</span>
-            </div>
-            <div class="machine" id="3">
-                <div class="open"></div>
+            </button>
+            <button class="open" onclick="chooseTimer('Washing Machine 3',3)" id="3">
+                <div class="light"></div>
                 <span>Washing Machine 3</span>
-            </div>
-            <div class="machine" id="4">
-                <div class = "open"></div>
+            </button>
+            <button class="open" onclick="chooseTimer('Washing Machine 4',4)" id="4">
+                <img class = "image" src="Images/WM_Close.png">
                 <span>Washing Machine 4</span>
-            </div>
-            <div class="machine" id="5">
-                <div class="open"></div>
+            </button>
+            <button class="open" onclick="chooseTimer('Washing Machine 5',5)" id="5">
+                <div class="light"></div>
+
                 <span>Washing Machine 5</span>
-            </div>
+            </button>
         </div>
 
         <div class="column">
             <!-- Column 2 -->
             
-            <div class="machine" id="6">
-                <div class="open"></div>
+
+            <button class="open" onclick="chooseTimer('Washing Machine 6',6)" id="6">
+                <div class="light"></div>
                 <span>Washing Machine 6</span>
-            </div>
-            <div class="machine" id="7">
-                <div class="open"></div>
+            </button>
+            <button class="open" onclick="chooseTimer('Washing Machine 7',7)"  id="7">
+                <div class="light"></div>
                 <span>Washing Machine 7</span>
-            </div>
-            <div class="machine" id="8">
-                <div class="open"></div>
+            </button>
+            <button class="open" onclick="chooseTimer('Washing Machine 8',8)"  id="8">
+                <div class="light"></div>
                 <span>Washing Machine 8</span>
-            </div>
-            <div class="machine" id="9">
-                <div class="close"></div>
+            </button>
+            <button class="open" onclick="chooseTimer('Washing Machine 9',9)"  id="9">
+                <div class="light"></div>
+
                 <span>Washing Machine 9</span>
-            </div>
+            </button>
         </div>
     </div>
 
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            menu.classList.toggle("open");
-            var menuIcon = document.querySelector(".menu-icon");
-            menuIcon.classList.toggle("open");
+        function chooseTimer(machineName,machineCode){
+            // Prompt the user for input
+            var timeInput = prompt("Enter washing time in minutes for " + machineName + ":");
+
+            // Validate the input and perform necessary actions
+            if (timeInput !== null && !isNaN(timeInput) && timeInput >= 1 && timeInput <= 9) {
+                alert("Washing time set to " + timeInput + " minutes for " + machineName + ".");
+                document.getElementById(machineCode).classList.toggle('close');
+                // Add your logic to handle the washing time here
+            } else {
+                alert("Invalid input. Please enter a number between 1 and 9.");
+            }
         }
     </script>
+    
 </body>
 </html>
