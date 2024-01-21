@@ -17,5 +17,6 @@ Users can visit website to know whether Washing MAchines are free or not.
 
 If the  Website got deployted on Internet, One can have add database to know who is login in and otherwise.
 
-This Similar Model can be applied for other Queue like Workspace, where person need to reserve place for particular amount of time, till It goes to other
-for availability of space.
+This Similar Model can be applied for other Queue like Workspace, where person need to reserve place for particular amount of time, till It goes to other for availability of space.
+
+For QR Code, We can use QR Code Generator which let us to deployed Website.
